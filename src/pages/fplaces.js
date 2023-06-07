@@ -32,7 +32,7 @@ const Fpeople = () => {
             alert("email should contain combinatation of letters and numbers");
           }
           if (f1 === 1) {
-            axios.post("/postfplaces", {
+            axios.post(`${process.env.REACT_APP_API_HOST}/postfplaces`, {
               email: email,
               pname: pname,
               why:why,
@@ -48,7 +48,7 @@ const Fpeople = () => {
       const [emaill,setEmaill]=useState("")
       const gethandler=(e)=>{
         e.preventDefault()
-        axios.get(`/getfplaces/${emaill}`).then((res)=>{
+        axios.get(`${process.env.REACT_APP_API_HOST}/getfplaces/${emaill}`).then((res)=>{
             let x=0;
             for(let i=0;i<emaill.length;i++){
                 x+=emaill[i].charCodeAt()
