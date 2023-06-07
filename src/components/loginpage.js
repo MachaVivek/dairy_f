@@ -20,7 +20,7 @@ const Loginpage = () => {
 
     const loginUser= async(e)=>{
         e.preventDefault()
-        const res= await fetch("/postlogin",{
+        const res= await fetch(`${process.env.REACT_APP_API_HOST}/postlogin`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
