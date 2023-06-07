@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
-
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -32,7 +31,7 @@ const Dailyd = () => {
             alert("email should contain combinatation of letters and numbers");
           }
           if (f1 === 1) {
-            axios.post("/postfdailydairy", {
+            axios.post(`${process.env.REACT_APP_API_HOST}/postfdailydairy`, {
               rad:rad,
               email: email,
               daname: daname,
@@ -49,7 +48,7 @@ const Dailyd = () => {
       const [emaill,setEmaill]=useState("")
       const gethandler=(e)=>{
         e.preventDefault()
-        axios.get(`/getfdailydairy/${emaill}`).then((res)=>{
+        axios.get(`${process.env.REACT_APP_API_HOST}/getfdailydairy/${emaill}`).then((res)=>{
             let x=0;
             for(let i=0;i<emaill.length;i++){
                 x+=emaill[i].charCodeAt()
