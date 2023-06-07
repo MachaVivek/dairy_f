@@ -26,7 +26,7 @@ const Registerpage = () => {
     const PostData= async (e)=>{
         e.preventDefault();
         const { fname,lname,gender,email,password,keyy,ckeyy}=user;
-        const res = await fetch("/postregister",{
+        const res = await fetch(`${process.env.REACT_APP_API_HOST}/postregister`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
