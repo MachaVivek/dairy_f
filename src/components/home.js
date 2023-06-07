@@ -15,7 +15,7 @@ const Home =()=>{
 
     const submithandler1=async(e)=>{
         e.preventDefault();
-        const res= await fetch("/checkkey",{
+        const res= await fetch(`${process.env.REACT_APP_API_HOST}/checkkey`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -35,7 +35,7 @@ const Home =()=>{
     }
     const submithandler2=async(e)=>{
         e.preventDefault();
-        const res= await fetch("/checkkey",{
+        const res= await fetch(`${process.env.REACT_APP_API_HOST}/checkkey`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -55,7 +55,7 @@ const Home =()=>{
     }
     const submithandler3=async(e)=>{
         e.preventDefault();
-        const res= await fetch("/checkkey",{
+        const res= await fetch(`${process.env.REACT_APP_API_HOST}/checkkey`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -75,7 +75,7 @@ const Home =()=>{
     }
     const submithandler4=async(e)=>{
         e.preventDefault();
-        const res= await fetch("/checkkey",{
+        const res= await fetch(`${process.env.REACT_APP_API_HOST}/checkkey`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -95,7 +95,7 @@ const Home =()=>{
     }
     const submithandler5=async(e)=>{
         e.preventDefault();
-        const res= await fetch("/checkkey",{
+        const res= await fetch(`${process.env.REACT_APP_API_HOST}/checkkey`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
