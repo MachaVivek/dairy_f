@@ -31,7 +31,7 @@ const Fdish = () => {
             alert("email should contain combinatation of letters and numbers");
           }
           if (f1 === 1) {
-            axios.post("/postfdish", {
+            axios.post(`${process.env.REACT_APP_API_HOST}/postfdish`, {
               email: email,
               dname: dname,
               why:why,
@@ -48,7 +48,7 @@ const Fdish = () => {
       
       const gethandler=(e)=>{
         e.preventDefault()
-        axios.get(`/getfdish/${emaill}`).then((res)=>{
+        axios.get(`${process.env.REACT_APP_API_HOST}/getfdish/${emaill}`).then((res)=>{
             let x=0;
             for(let i=0;i<emaill.length;i++){
                 x+=emaill[i].charCodeAt()
