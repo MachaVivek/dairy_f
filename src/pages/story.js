@@ -31,7 +31,7 @@ const Story = () => {
             alert("email should contain combinatation of letters and numbers");
           }
           if (f1 === 1) {
-            axios.post("/postfstory", {
+            axios.post(`${process.env.REACT_APP_API_HOST}/postfstory`, {
               email: email,
               sname: sname,
               why:why,
@@ -47,7 +47,7 @@ const Story = () => {
       const [emaill,setEmaill]=useState("")
       const gethandler=(e)=>{
         e.preventDefault()
-        axios.get(`/getfstory/${emaill}`).then((res)=>{
+        axios.get(`${process.env.REACT_APP_API_HOST}/getfstory/${emaill}`).then((res)=>{
             let x=0;
             for(let i=0;i<emaill.length;i++){
                 x+=emaill[i].charCodeAt()
